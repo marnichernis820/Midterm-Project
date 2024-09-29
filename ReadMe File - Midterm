@@ -1,0 +1,51 @@
+# This is the initial part of the midterm project to solve a 9x9 Sudoku Board
+
+The goal of the project is to create a Sudoko board, create functions to solve it, and run the code to solve it.
+I chose this project because I like playing the game and thought it would be a good way to learn more about python.
+
+First, I started with a 9x9 board. I will explain it starting from row 4.
+
+The goal of this section of code is to establish the rules. This means process whether a number belongs in a given code
+
+To do this, we set the range to 1-9 for both the rows and columns
+
+if a number fits, it returns a number in the range.
+If it does not fit, it will return false
+
+Then I establish if the code can fit in the smaller 3x3 grid
+If it can, it returns the number, and if it can not it returns false.
+
+
+The code then begins to use backtracking to take this information and actually solve the code.
+It extrapolates the information to find empty cells.
+It tests the board through recursive attempts to generate new numbers.
+
+If the number does not yield a solution, the result will be 0. 
+This explains why in the test setup, there are many 0s
+If there is a entry indicated FALSE, then backtracking will trigger a zero
+
+I then joined the strings in order to piece together numbers and falses
+This yields a board with some correct numbers and some falses indicated as 0
+
+I then tell the code to solve the puzzle by printing a solved board
+On the contrary, if a solution does not exist it will print No solution exists
+
+We then get a solved version of a 9x9 Sudoku board.
+
+
+#Then we will do the same for a 16x16 board.
+The only difference in this case is the integer values possible for the solution.
+Since there are more cells, the range will now be from 1-16.
+Instead of 9 groupings of 3x3 boards, there will be 4 groupings of 4x4 boards
+
+The code is still the same but the values coincide with 16 and 4 instead of 9 and 3.
+
+For the test setup, a 0 still means incorrect and an integer 1-16 represents a correct value.
+
+After printing, we get a printed cell with integers and 0s.
+
+We then repeat the same step to actually solve the board. 
+This includes joining string of correct numbers and printing. 
+The board is printed unless no solution exists and then it will print 'no solution exists'
+
+That is the final aspect of the code.
